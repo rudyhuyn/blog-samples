@@ -1,4 +1,5 @@
-﻿using Windows.ApplicationModel.Preview.Holographic;
+﻿using Windows.ApplicationModel.LockScreen;
+using Windows.ApplicationModel.Preview.Holographic;
 using Windows.Foundation.Metadata;
 using Windows.UI.ViewManagement;
 
@@ -34,6 +35,10 @@ namespace Huyn
                         if (applicationView.ViewMode == ApplicationViewMode.CompactOverlay)
                         {
                             return WindowDisplayMode.CompactOverlay;
+                        }
+                        if(LockApplicationHost.GetForCurrentView() != null)
+                        {
+                            return WindowDisplayMode.FullScreen;
                         }
                         if (IsMixedReality())
                         {
