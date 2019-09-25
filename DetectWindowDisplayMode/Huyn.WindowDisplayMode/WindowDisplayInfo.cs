@@ -32,7 +32,7 @@ namespace Huyn
             {
                 case "Windows.Desktop":
                     {
-                        if (applicationView.ViewMode == ApplicationViewMode.CompactOverlay)
+                        if (ApiInformation.IsEnumNamedValuePresent("Windows.UI.ViewManagement.ApplicationViewMode", "CompactOverlay") && applicationView.ViewMode == ApplicationViewMode.CompactOverlay)
                         {
                             return WindowDisplayMode.CompactOverlay;
                         }
