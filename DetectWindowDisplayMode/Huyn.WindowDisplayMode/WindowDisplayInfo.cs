@@ -38,6 +38,9 @@ namespace Huyn
                         }
                         if(LockApplicationHost.GetForCurrentView() != null)
                         {
+                            // When an application is in kiosk mode, ApplicationView.ISFullScreenMode will return false
+                            // even if the application is in fact displayed full screen. We need to check manually if an application is
+                            // in kiosk mode and force the result to FullScreen.
                             return WindowDisplayMode.FullScreen;
                         }
                         if (IsMixedReality())
