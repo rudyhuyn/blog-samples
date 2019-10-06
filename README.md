@@ -1,2 +1,2 @@
 # blog-samples
-Sample projects from rudyhuyn.com/blog
+Sample projects from https://www.rudyhuyn.com/blog
